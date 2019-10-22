@@ -8,3 +8,6 @@ repetitions for number of times through the rainbow per loop, should be some mul
 color_density for color transition density
 
 make sure the gif has some transparency or nothing will happen
+
+
+![Input Image](/transparent_monkey_small.gif)
