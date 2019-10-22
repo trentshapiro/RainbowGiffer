@@ -19,4 +19,4 @@ mode = "background":
 ![Rainbow Background](/rainbow_background.gif) 
 
 Input Image:
-![Latchball](/latchball.png) 
+![Latchball](/latchball.png){:height="50%" width="50%"}
