@@ -22,7 +22,7 @@ mode = "background":
 
 
 Static Input Image:
-![Input Image](/latchball.gif) 
+![Input Image](/latchball.png) 
 
 mode = "foreground":
 ![Rainbow Foreground](/latchball_rainbow_foreground.gif)
