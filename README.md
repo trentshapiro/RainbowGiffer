@@ -10,4 +10,4 @@ color_density for color transition density
 make sure the gif has some transparency or nothing will happen
 
 
-![Input Image](/transparent_monkey_small.gif)
+![Input Image](/monkey_transparent_small.gif)
