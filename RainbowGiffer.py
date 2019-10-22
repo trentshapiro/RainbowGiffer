@@ -7,19 +7,23 @@ from PIL import Image
 from PIL import GifImagePlugin
 
 
-def color_fade(color1, color2, mix = 0): # fade (linear interpolate) from color c1 (at mix=0) to c2 (mix=1)
+def color_fade(color1, color2, mix = 0):
     color1 = np.array(mpl.colors.to_rgb(color1))
     color2 = np.array(mpl.colors.to_rgb(color2))
     return mpl.colors.to_hex((1-mix)*color1 + mix*color2)
 
 
-original_gif = Image.open(os.path.expanduser("~/monkey_transparent_small.gif"))
+original_gif = Image.open(os.path.expanduser(filepath))
 frames = [frame.copy().convert("RGBA") for frame in ImageSequence.Iterator(original_gif)]
-mode = "background"
+mode = "foreground"
+default_frame_count = 50
 
-frame_count = len(frames)
-print(frame_count)
-repetitions = 2
+if len(frames) > 1:
+    frame_count = len(frames)
+else:
+    frame_count = default_frame_count
+
+repetitions = 5
 
 color_list = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF', '#FF0000']
 
@@ -42,9 +46,13 @@ for i in range(0, repetitions):
 
 frames_out = []
 for i in range(0, frame_count):
-    this_image = frames[i]
-    h, w = this_image.size
-    color_image = Image.new("RGBA", (h, w), color=frame_colors[i])
+    if len(frames) > 1:
+        this_image = frames[i]
+    else:
+        this_image = frames[0]
+
+    w, h = this_image.size
+    color_image = Image.new("RGBA", (w, h), color=frame_colors[i])
 
     if mode == "foreground":
         merged_image = Image.blend(this_image, color_image, 0.5)
