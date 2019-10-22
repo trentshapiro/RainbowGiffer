@@ -7,9 +7,11 @@ repetitions for number of times through the rainbow per loop, should be some mul
 
 color_density for color transition density
 
+default_frame_count for number of frames in static image
+
 make sure the gif has some transparency or nothing will happen
 
-Input Image:
+Gif Input Image:
 ![Input Image](/monkey_transparent_small.gif) 
 
 mode = "foreground":
@@ -17,3 +19,13 @@ mode = "foreground":
 
 mode = "background":
 ![Rainbow Background](/rainbow_background.gif) 
+
+
+Static Input Image:
+![Input Image](/latchball.gif) 
+
+mode = "foreground":
+![Rainbow Foreground](/latchball_rainbow_foreground.gif)
+
+mode = "background":
+![Rainbow Background](/latchball_rainbow_background.gif) 
