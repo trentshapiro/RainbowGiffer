@@ -9,5 +9,11 @@ color_density for color transition density
 
 make sure the gif has some transparency or nothing will happen
 
+Input Image:
+![Input Image](/monkey_transparent_small.gif) 
 
-![Input Image](/monkey_transparent_small.gif) ![Rainbow Background](/rainbow_background.gif) ![Rainbow Foreground](/rainbow_foreground.gif)
+mode = "foreground":
+![Rainbow Foreground](/rainbow_foreground.gif)
+
+mode = "background":
+![Rainbow Background](/rainbow_background.gif) 
