@@ -17,3 +17,6 @@ mode = "foreground":
 
 mode = "background":
 ![Rainbow Background](/rainbow_background.gif) 
+
+Input Image:
+![Latchball](/latchball.png) 
